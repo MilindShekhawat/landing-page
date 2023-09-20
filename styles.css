@@ -1,28 +1,24 @@
-* {
-    margin: 0;
-    box-sizing: border-box;
-    border: 1px solid yellow; 
-    font-family: 'Roboto', sans-serif;
-}
-
 body {
+    box-sizing: border-box;
     display: flex;
-    flex-direction: column;
-    max-width: 80%;
-    margin: auto;
+    flex-flow: column wrap;
+    justify-content: center;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
+/*  HEADER  and FOOTER*/ 
 .header, .footer{
     display: flex;
-    padding: 10px;
+    flex-flow: row wrap;
     align-items: center;
-    background: #1f2937;
+    justify-content: space-around;
     color: #f9faf8;
-}
-
-/*  HEADER  */ 
-.header {
-    justify-content: space-between;
+    background: #1f2937;
+    padding: 10px;
+    height: 100px;
+    align-items: center;
 }
 .header-logo {
     height: 60px;
@@ -40,28 +36,23 @@ a {
     text-decoration: none;
 }
 
-/*  BODY CONTAINER */ 
-.container > div{
-    display: flex;
-    padding: 100px 0px;
-    align-items: center;
-}
-
 /*  BODY ONE  */ 
 .hero {
     display: flex;
-    flex-wrap: wrap;
+    flex-flow: row wrap;
+    align-items: center;
     justify-content: center;
-    gap: 10px;
     color: #f9faf8;
     background: #1f2937;
+    gap: 10px;
+    padding: 100px 20px;
 }
 .sign-up{
     max-width: 500px;
     flex-shrink:1 1 0;
 }
 .sign-up > *{
-    margin: 10px 0px;
+    margin-bottom: 10px;
 }
 .sign-up > h1{
     font-size: 48px;
@@ -82,7 +73,7 @@ a {
 }
 .hero-img{
     max-width: 500px;
-    height: 250px;
+    height: 230px;
     flex: 1 1 0;
     object-fit:cover;
 }
@@ -90,8 +81,15 @@ a {
 /*  BODY TWO  */ 
 .info {
     display: flex;
-    flex-direction: column;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
     color: #1f2937;
+    padding: 100px 20px;
+    background: url(img/canny.png) no-repeat center fixed;
+}
+.info > * {
+    margin-bottom: 30px;
 }
 .info > h1 {
     font-size: 36px;
@@ -99,38 +97,84 @@ a {
 }
 .card-container{
     display: flex;
+    flex-flow: row wrap;
     justify-content: center;
-    flex-wrap: wrap;
     gap: 20px;
 }
 .card-container > div{
     width: 150px;
 }
 .card> img{
-    border: 5px solid #3882F6;
-    border-radius: 10px;;
+    border-radius: 10px;
     width: 100%;
     height: auto;
 }
 .card > p {
-    font-size: 36px;
-    color:#e5e7eb;
+    font-size: 20px;
     font-weight: bolder;
     text-align: center;
 }
+
 /*  BODY THREE  */ 
 .quote {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
     color: #1f2937;
     background: #e5e7eb;
+    padding: 50px 20px;
+
+}
+.quotes{
+    font-style: italic;
+    font-size: 36px;
+    font-weight: light;
+    margin-bottom: 10px;
+    width: 80%;
+}
+.speaker{
+    font-size: 20px;
+    width: 80%;
+    font-weight: bold;
+    text-align: end;
 }
 
 /*  BODY FOUR */ 
-.call {
+.report {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
     color: #f9faf8;
+    padding: 100px 20px;
+    background: url(img/uncanny.png) no-repeat center fixed;
+}
+.report-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    padding: 25px 100px;
+    border-radius: 10px;
+    background: #3882F6;
+}
+.report-text {
+    flex: 1 1 200px;
+}
+.report-text > h1 {
+    font-size: 22px;
+    font-weight: bold;
+}
+.report-container > button {
+    border-radius: 10px;
+    border: 2px solid;
+    padding: 10px 30px;
+    color: #f9faf8;
+    font-weight: bold;
+    font-size: 18px;
+    background: #3882F6;
+    flex: 0 1 auto;
 }
 
-/*  FOOTER  */ 
-.footer {
-    justify-content: space-around;
-}
 
